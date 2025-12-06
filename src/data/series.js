@@ -1,0 +1,130 @@
+export const seriesData = [
+  {
+    id: 1,
+    title: "Stranger Things",
+    image: "https://i.pinimg.com/1200x/11/ee/9c/11ee9ce236f8781d441082b4ed14308b.jpg",
+    rating: 9,
+    release: "2016",
+    description: "Маленький городок Хокинс потрясают мистические события: пропадает мальчик, друзья сталкиваются с паранормальным миром и тайными экспериментами."
+  },
+  {
+    id: 2,
+    title: "The Witcher",
+    image: "https://i.pinimg.com/1200x/9a/ab/e8/9aabe8e47cc2c3ba25aacce0eec67141.jpg",
+    rating: 8,
+    release: "2019",
+    description: "Геральт из Ривии — охотник на чудовищ, скитается по опасному миру магии и интриг, сталкиваясь с людьми и монстрами."
+  },
+  {
+    id: 3,
+    title: "Squid Game",
+    image: "https://i.pinimg.com/1200x/91/6b/37/916b376a61e8f11293c115bc0361a7d2.jpg",
+    rating: 10,
+    release: "2021",
+    description: "Бедные люди соглашаются участвовать в смертельной игре на выживание с огромным денежным призом, где каждая ошибка стоит жизни."
+  },
+  {
+    id: 4,
+    title: "Bridgerton",
+    image: "https://i.pinimg.com/1200x/e2/d4/8b/e2d48beceec60e42c5f4c4006178fa7d.jpg",
+    rating: 7,
+    release: "2020",
+    description: "Высшее общество Лондона XIX века: любовные интриги, скандалы и тайны аристократических семей."
+  },
+  {
+    id: 5,
+    title: "The Crown",
+    image: "https://i.pinimg.com/1200x/64/12/3d/64123ddeb1e074abe4d73e25b8ebfe71.jpg",
+    rating: 8,
+    release: "2016",
+    description: "Жизнь королевы Елизаветы II, её политические вызовы, личные драмы и исторические события, которые формируют Британию."
+  },
+  {
+    id: 6,
+    title: "Ozark",
+    image: "https://i.pinimg.com/1200x/87/09/03/8709034c070c261e8a364f06587970cf.jpg",
+    rating: 8,
+    release: "2017",
+    description: "Финансовый консультант перемещает семью в Озаркс, чтобы отмывать деньги для наркокартеля, балансируя между опасностью и выживанием."
+  },
+  {
+    id: 7,
+    title: "Money Heist",
+    image: "https://i.pinimg.com/736x/ef/71/72/ef7172c57fe0657a1e63f07d757dd2dd.jpg",
+    rating: 9,
+    release: "2017",
+    description: "Смелое ограбление Монетного двора Испании. Команда профессионалов под руководством Профессора совершает дерзкий план."
+  },
+  {
+    id: 8,
+    title: "Lucifer",
+    image: "https://i.pinimg.com/736x/07/12/52/071252ac4197a572ebbfab8a28b7886d.jpg",
+    rating: 8,
+    release: "2016",
+    description: "Люцифер Морнингстар устал от Ада и помогает полиции Лос-Анджелеса раскрывать преступления, сталкиваясь с человеческой моралью и искушением."
+  },
+  {
+    id: 9,
+    title: "Emily in Paris",
+    image: "https://i.pinimg.com/736x/94/10/f7/9410f7915448f0c9b18e0b945058c284.jpg",
+    rating: 6,
+    release: "2020",
+    description: "Американка Эмили переезжает в Париж ради работы, погружается в местную культуру, романтику и карьерные испытания."
+  },
+  {
+    id: 10,
+    title: "You",
+    image: "https://i.pinimg.com/1200x/1b/da/c0/1bdac0824edf2832b9cc7a8f0bd3e933.jpg", 
+    rating: 9,
+    release: "2017",
+    description: "История одержимого мужчины, который готов на всё ради любви, преследует и манипулирует окружающими ради своих целей."
+},
+  {
+    id: 11,
+    title: "The Mandalorian",
+    image: "https://i.pinimg.com/736x/49/7b/8b/497b8bdd152ea05fce5654a0b8c799f7.jpg",
+    rating: 9,
+    release: "2019",
+    description: "Одинокий охотник за головами путешествует по галактике, защищая таинственного ребёнка с невероятными способностями."
+  },
+  {
+    id: 12,
+    title: "Breaking Bad",
+    image: "https://i.pinimg.com/736x/2d/2a/db/2d2adb4532ac71cddafc036356cb023e.jpg",
+    rating: 10,
+    release: "2008",
+    description: "Учитель химии превращается в наркобарона, балансируя между семьёй и криминальным миром."
+  },
+  {
+    id: 13,
+    title: "Friends",
+    image: "https://i.pinimg.com/736x/ee/6c/2b/ee6c2b7a7f01ffdf1d36e53fa593d8a0.jpg",
+    rating: 8,
+    release: "1994",
+    description: "Жизнерадостная комедия о жизни шести друзей в Нью-Йорке, их любви, работе и забавных ситуациях."
+  },
+  {
+    id: 14,
+    title: "The Boys",
+    image: "https://i.pinimg.com/736x/ad/a0/f4/ada0f42071e082e39b763df643a00c63.jpg",
+    rating: 9,
+    release: "2019",
+    description: "Супергерои с темной стороны: команда обычных людей сражается с могущественными и коррумпированными героями."
+  },
+{
+    id: 15,
+    title: "Dark",
+    image: "https://i.pinimg.com/736x/94/00/10/940010831c9010d9bea0f40aff4c5fdb.jpg", 
+    rating: 9,
+    release: "2019",
+    description: "В маленьком немецком городке исчезают дети, что раскрывает сложные тайны, временные парадоксы и семейные секреты."
+},
+  {
+    id: 16,
+    title: "Sherlock",
+    image: "https://i.pinimg.com/1200x/39/c6/bf/39c6bff983453edb70f80d82305110c7.jpg",
+    rating: 10,
+    release: "2010",
+    description: "Современная адаптация легендарного детектива Шерлока Холмса и его невероятных расследований в Лондоне."
+  }
+];
