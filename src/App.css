@@ -260,7 +260,7 @@ header nav a:hover {
   text-decoration: none;
   color: inherit;
 }
-/* ===== СЛАЙДЕР БАННЕР (ПОЛНЫЕ СТИЛИ) ===== */
+/* ===== СЛАЙДЕР БАННЕР ===== */
 .slider-container {
   position: relative;
   height: 500px;
@@ -353,7 +353,7 @@ header nav a:hover {
   box-shadow: 0 20px 45px rgba(255, 0, 255, 0.6);
 }
 
-/* Индикаторы */
+/* индикаторы */
 .slide-indicators {
   position: absolute;
   bottom: 25px;
@@ -382,7 +382,7 @@ header nav a:hover {
   box-shadow: 0 0 15px rgba(204, 0, 255, 0.7);
 }
 
-/* Адаптивность */
+/* адаптивность */
 @media (max-width: 768px) {
   .slider-container {
     height: 400px;
@@ -421,7 +421,7 @@ header nav a:hover {
     gap: 8px;
   }
 }
-/* ===== Фильтрация и поиск ===== */
+/* ===== фильтрация/поиск ===== */
 .search-container {
   max-width: 500px;
   margin: 20px auto;
@@ -498,4 +498,178 @@ header nav a:hover {
   color: #a8a0c8;
   font-size: 20px;
   font-family: 'Montserrat', sans-serif;
+}
+
+/* ===== каталог аниме ===== */
+.cards-container-anime {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  padding: 30px;
+}
+
+.card-anime {
+  width: 230px;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #3d1f39, #4f2650);
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;           
+  flex-direction: column;  
+}
+
+.card-anime img {
+  width: 100%;
+  height: 360px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card-anime h4 {
+  margin: 10px 0 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffe6fb;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-anime .stars {
+  margin-top: auto;
+  font-size: 20px;
+  color: rgb(238, 255, 0);
+}
+
+/* ===== ховер для аниме ===== */
+.card-anime img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.8s; 
+}
+
+.card-anime img:hover {
+  transform: scale(1.5) rotate(0deg); 
+  transition: 0.8s; 
+}
+
+/* ===== Стр одного аниме ===== */
+.anime-detail {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 40px;
+  justify-content: center;
+  background: linear-gradient(180deg, #251524, #3d1f3b);
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.anime-detail img {
+  width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease;
+}
+
+.anime-detail img:hover {
+  transform: scale(1.05);
+}
+
+.anime-detail .anime-info {
+  max-width: 650px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.anime-detail h2 {
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  color: #ffe6fd;
+  margin-bottom: 10px;
+}
+
+.anime-detail p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffd9fa;
+}
+
+.anime-detail .stars {
+  font-size: 22px;
+  color: rgb(255, 0, 212);
+}
+
+/* назад батон*/
+.back-button-anime {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(135deg, #632d5c, #502650);
+  color: #f0e6ff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.back-button-anime:hover {
+  background: linear-gradient(135deg, #853a75, #642d6f);
+  transform: scale(1.05);
+}
+
+/* ===== каталог аниме ===== */
+.page-anime {
+  padding: 20px;
+}
+
+.card-movies-anime {
+  width: 230px;
+  height: 400px;
+  border-radius: 15px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #3d1f38, #50264e);
+  text-align: center;
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-movies-anime img {
+  width: 100%;
+  height: 360px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+
+.card-movies-anime img:hover {
+  transform: scale(1.5) rotate(0deg);
+  transition: 0.8s;
+}
+
+.card-movies-anime h4 {
+  margin: 10px 0 5px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffe6fd;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.card-movies-anime .stars {
+  margin-top: auto;
+  font-size: 20px;
+  color: rgb(255, 0, 255);
+}
+
+.card-link-anime {
+  text-decoration: none;
+  color: inherit;
 }

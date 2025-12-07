@@ -101,7 +101,7 @@ export const moviesData = [
     {
         id: 12,
         title: "Начало",
-        image: "https://upload.wikimedia.org/wikipedia/ru/5/5a/Inception_2010_Poster_2.jpg",
+        image: "https://upload.wikimedia.org/wikipedia/ru/b/bc/Poster_Inception_film_2010.jpg",
         rating: 10,
         release: "2010",
         description: "Вор, проникающий в сны, получает задание внедрить идею в подсознание могущественного наследника.",
@@ -110,7 +110,7 @@ export const moviesData = [
     {
         id: 13,
         title: "Бойцовский клуб",
-        image: "https://upload.wikimedia.org/wikipedia/ru/3/3d/Fight_Club_poster.jpg",
+        image: "https://www.krasdomkino.ru/system/uploads/film/cover/2548/FightClub_webposter.jpg",
         rating: 9,
         release: "1999",
         description: "Офисный клерк и мыловар создают подпольный клуб боев, который перерастает в революцию.",
@@ -119,7 +119,7 @@ export const moviesData = [
     {
         id: 14,
         title: "Зеленая миля",
-        image: "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/8f2e1d4c-5b7a-4e9f-8d3c-2a1b6e7f0g9h/1920x",
+        image: "https://upload.wikimedia.org/wikipedia/ru/b/b0/Green_mile_film.jpg",
         rating: 10,
         release: "1999",
         description: "Надзиратель тюрьмы встречает заключенного с необычными целительскими способностями.",
@@ -128,7 +128,7 @@ export const moviesData = [
     {
         id: 15,
         title: "Форрест Гамп",
-        image: "https://upload.wikimedia.org/wikipedia/ru/6/6b/Forrest_Gump_poster.jpg",
+        image: "https://optim.tildacdn.com/tild3062-3635-4837-b639-633137626365/-/resize/744x/-/format/webp/p15829_v_v13_aa.jpeg.webp",
         rating: 9,
         release: "1994",
         description: "Жизненный путь Форреста Гампа, простого человека, который меняет историю Америки.",
@@ -137,7 +137,7 @@ export const moviesData = [
     {
         id: 16,
         title: "Криминальное чтиво",
-        image: "https://upload.wikimedia.org/wikipedia/ru/6/69/Pulp_Fiction_poster.jpg",
+        image: "https://avatars.mds.yandex.net/get-kinopoisk-image/4716873/0a07a903-9025-4aff-bf7c-46bbb175888c/600x900",
         rating: 9,
         release: "1994",
         description: "Нелинейные истории гангстеров, боксеров и бандитов в Лос-Анджелесе.",
@@ -146,7 +146,7 @@ export const moviesData = [
     {
         id: 17,
         title: "Темный рыцарь",
-        image: "https://upload.wikimedia.org/wikipedia/ru/1/1a/The_Dark_Knight_poster.jpg",
+        image: "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/0fa5bf50-d5ad-446f-a599-b26d070c8b99/220x330",
         rating: 10,
         release: "2008",
         description: "Бэтмен против Джокера, который хочет посеять хаос и анархию в Готэме.",
@@ -155,7 +155,7 @@ export const moviesData = [
     {
         id: 18,
         title: "Интерстеллар",
-        image: "https://upload.wikimedia.org/wikipedia/ru/4/4d/Interstellar_film_poster.jpg",
+        image: "https://lafeum.ru/img/authors/1607593784.jpeg",
         rating: 9,
         release: "2014",
         description: "Астронавты ищут новую планету для человечества через червоточину в космосе.",

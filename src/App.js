@@ -4,12 +4,16 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import CardSeries from './components/CardSeries';
 import CardMovies from './components/CardMovies';
+import CardAnime from "./components/CardAnime";
 import { seriesData } from './data/series';
 import { moviesData } from './data/movies';
+import { animeData } from "./data/anime";
 import PageSeries from './pages/PageSeries';
 import PageMovies from './pages/PageMovies';
+import PageAnime from './pages/PageAnime';
 import SeriesDetail from './pages/SeriesDetail';
 import MoviesDetail from './pages/MoviesDetail';
+import AnimeDetail from './pages/AnimeDetail';
 function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
@@ -46,6 +50,8 @@ function Home() {
 
   const popularSeries = seriesData.slice(0, 3);
   const popularMovies = moviesData.slice(0, 3);
+  const popularAnime = animeData.slice(0, 3);
+
 
   return (
     <div>
@@ -93,12 +99,12 @@ function Home() {
       </div>
 
       {/* АНИМЕ (пока заглушки - останутся как есть) */}
-      <div style={{padding: "20px"}}>
+      <div style={{ padding: "20px" }}>
         <h3>Популярное аниме</h3>
-        <div style={{display: "flex", gap: "10px", justifyContent: "center"}}>
-          <div style={{border: "1px solid #000", padding: "10px"}}>Аниме 1</div>
-          <div style={{border: "1px solid #000", padding: "10px"}}>Аниме 2</div>
-          <div style={{border: "1px solid #000", padding: "10px"}}>Аниме 3</div>
+        <div style={{ display: "flex", gap: "20px", justifyContent: "center" }}>
+          {popularAnime.map(anime => (
+            <CardAnime key={anime.id} {...anime} />
+          ))}
         </div>
       </div>
     </div>
@@ -114,6 +120,8 @@ function App() {
         <Route path="/series/:id" element={<SeriesDetail />} />
         <Route path="/movies" element={<PageMovies />} /> {/* ← ДОБАВИТЬ */}
         <Route path="/movies/:id" element={<MoviesDetail />} /> {/* ← ДОБАВИТЬ */}
+        <Route path="/anime" element={<PageAnime />} />
+        <Route path="/anime/:id" element={<AnimeDetail />} />
       </Routes>
       <Footer />
     </>
