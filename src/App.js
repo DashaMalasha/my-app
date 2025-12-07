@@ -1,72 +1,121 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';  
+import { Routes, Route, Link } from 'react-router-dom';  
 import Header from './components/Header';
 import Footer from './components/Footer';
 import CardSeries from './components/CardSeries';
+import CardMovies from './components/CardMovies';
 import { seriesData } from './data/series';
+import { moviesData } from './data/movies';
 import PageSeries from './pages/PageSeries';
+import PageMovies from './pages/PageMovies';
 import SeriesDetail from './pages/SeriesDetail';
-
+import MoviesDetail from './pages/MoviesDetail';
 function Home() {
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const slides = [
+    {
+      title: "🎥 Лучшие фильмы",
+      subtitle: "Эксклюзивные новинки и топовые хиты",
+      buttonText: "Смотреть фильмы",
+      buttonLink: "/movies",
+      bgImage: "https://i.pinimg.com/originals/6b/5f/71/6b5f71ac1d1c93a4ef86eaae9a55a4c5.jpg"
+    },
+    {
+      title: "📺 Популярные сериалы", 
+      subtitle: "Захватывающие истории и драмы",
+      buttonText: "Смотреть сериалы",
+      buttonLink: "/series",
+      bgImage: "https://i.ytimg.com/vi/MKS21OV69s0/maxresdefault.jpg"
+    },
+    {
+      title: "🎌 Лучшее аниме",
+      subtitle: "Легендарные саги и новые сезоны",
+      buttonText: "Смотреть аниме", 
+      buttonLink: "/anime",
+      bgImage: "https://i.pinimg.com/originals/7f/9b/5b/7f9b5beb6cb7a37010be63ff890d6523.jpg"
+    }
+  ];
+
+  // Автопрокрутка
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
   const popularSeries = seriesData.slice(0, 3);
+  const popularMovies = moviesData.slice(0, 3);
 
   return (
     <div>
-      {/* Баннер */}
-      <div style={{padding: "40px", textAlign: "center", background: "#ddd"}}>
-        <h2>Главный баннер сайта</h2>
-        <p>Новинки и популярные подборки!</p>
-      </div>
+      {/* 🎨 1. СЛАЙДЕР БАННЕР (ПЕРВЫЙ) */}
+      <div className="slider-container">
+        <div className="slide active" style={{ backgroundImage: `url(${slides[currentSlide].bgImage})` }}>
+          <div className="slide-content">
+            <h1>{slides[currentSlide].title}</h1>
+            <p>{slides[currentSlide].subtitle}</p>
+            <Link to={slides[currentSlide].buttonLink} className="banner-btn">
+              {slides[currentSlide].buttonText} →
+            </Link>
+          </div>
+        </div>
 
-      {/* Карточки фильмов */}
-      <div style={{padding: "20px"}}>
-        <h3>Популярные фильмы</h3>
-        <div style={{display: "flex", gap: "10px"}}>
-          <div style={{border: "1px solid #000", padding: "10px"}}>Фильм 1</div>
-          <div style={{border: "1px solid #000", padding: "10px"}}>Фильм 2</div>
-          <div style={{border: "1px solid #000", padding: "10px"}}>Фильм 3</div>
+        <div className="slide-indicators">
+          {slides.map((_, index) => (
+            <span
+              key={index}
+              className={`indicator ${currentSlide === index ? 'active' : ''}`}
+              onClick={() => setCurrentSlide(index)}
+            />
+          ))}
         </div>
       </div>
 
-      {/* Карточки аниме */}
+      {/* 🎬 2. ПОПУЛЯРНЫЕ ФИЛЬМЫ (ОСТАЮТСЯ) */}
+      <div style={{padding: "20px"}}>
+        <h3>Популярные фильмы</h3>
+        <div style={{display: "flex", gap: "20px", justifyContent: "center"}}>
+          {popularMovies.map(movie => (
+            <CardMovies key={movie.id} {...movie} />
+          ))}
+        </div>
+      </div>
+
+      {/* 📺 3. ПОПУЛЯРНЫЕ СЕРИАЛЫ (ОСТАЮТСЯ) */}
+      <div style={{padding: "20px"}}>
+        <h3>Популярные сериалы</h3>
+        <div style={{display: "flex", gap: "20px", justifyContent: "center"}}>
+          {popularSeries.map(series => (
+            <CardSeries key={series.id} {...series} />
+          ))}
+        </div>
+      </div>
+
+      {/* АНИМЕ (пока заглушки - останутся как есть) */}
       <div style={{padding: "20px"}}>
         <h3>Популярное аниме</h3>
-        <div style={{display: "flex", gap: "10px"}}>
+        <div style={{display: "flex", gap: "10px", justifyContent: "center"}}>
           <div style={{border: "1px solid #000", padding: "10px"}}>Аниме 1</div>
           <div style={{border: "1px solid #000", padding: "10px"}}>Аниме 2</div>
           <div style={{border: "1px solid #000", padding: "10px"}}>Аниме 3</div>
         </div>
       </div>
-
-      {/* Карточки сериалов */}
-      <div style={{padding: "20px"}}>
-        <h3>Популярные сериалы</h3>
-        <div style={{display: "flex", gap: "20px", justifyContent: "center"}}>
-          {popularSeries.map(series => (
-            <CardSeries
-              key={series.id}
-              id={series.id}
-              title={series.title}
-              image={series.image}
-              rating={series.rating}
-            />
-          ))}
-        </div>
-      </div>
     </div>
   );
 }
-
 function App() {
   return (
     <>
-      <Header />  {/* шапка на всех страницах */}
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/series" element={<PageSeries />} />
         <Route path="/series/:id" element={<SeriesDetail />} />
+        <Route path="/movies" element={<PageMovies />} /> {/* ← ДОБАВИТЬ */}
+        <Route path="/movies/:id" element={<MoviesDetail />} /> {/* ← ДОБАВИТЬ */}
       </Routes>
-      <Footer />  {/* подвал на всех страницах */}
+      <Footer />
     </>
   );
 }
