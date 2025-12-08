@@ -29,7 +29,7 @@ function Home() {
       subtitle: "Захватывающие истории и драмы",
       buttonText: "Смотреть сериалы",
       buttonLink: "/series",
-      bgImage: "https://i.ytimg.com/vi/MKS21OV69s0/maxresdefault.jpg"
+      bgImage: "https://i.pinimg.com/1200x/86/f1/99/86f199d0c6f5cedd14c121164fa5fafc.jpg"
     },
     {
       title: "🎌 Лучшее аниме",
@@ -46,7 +46,7 @@ function Home() {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 5000);
     return () => clearInterval(interval);
-  }, []);
+  }, );
 
   const popularSeries = seriesData.slice(0, 3);
   const popularMovies = moviesData.slice(0, 3);
@@ -88,6 +88,14 @@ function Home() {
         </div>
       </div>
 
+       <div style={{ padding: "20px" }}>
+        <h3>Популярное аниме</h3>
+        <div style={{ display: "flex", gap: "20px", justifyContent: "center" }}>
+          {popularAnime.map(anime => (
+            <CardAnime key={anime.id} {...anime} />
+          ))}
+        </div>
+      </div>
       {/* 📺 3. ПОПУЛЯРНЫЕ СЕРИАЛЫ (ОСТАЮТСЯ) */}
       <div style={{padding: "20px"}}>
         <h3>Популярные сериалы</h3>
@@ -99,14 +107,7 @@ function Home() {
       </div>
 
       {/* АНИМЕ (пока заглушки - останутся как есть) */}
-      <div style={{ padding: "20px" }}>
-        <h3>Популярное аниме</h3>
-        <div style={{ display: "flex", gap: "20px", justifyContent: "center" }}>
-          {popularAnime.map(anime => (
-            <CardAnime key={anime.id} {...anime} />
-          ))}
-        </div>
-      </div>
+     
     </div>
   );
 }
