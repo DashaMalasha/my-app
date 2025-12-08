@@ -8,6 +8,9 @@ body, html, #root {
   background: #241525;
   color: #f0f0f0;
 }
+h3 {
+    text-align: center;
+}
 
 /* ===== Шапка ===== */
 header {
